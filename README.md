@@ -1,5 +1,5 @@
 # Crack Captcha
-The captcha we about to crack is very simple, for example: ![example](https://cdn.jsdelivr.net/gh/justsong-lab/images/misc/example.gif)
+The captcha we about to crack is very simple, for example: ![example](archive/example.gif)
 
 
 ## TODOs
