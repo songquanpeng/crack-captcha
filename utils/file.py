@@ -6,7 +6,7 @@ import shutil
 
 
 def list_all_images(path, full_path=True):
-    image_types = ('png', 'jpg', 'jpeg')
+    image_types = ('png', 'jpg', 'jpeg', 'gif')
     image_list = []
     for image_type in image_types:
         image_list.extend(glob.glob(os.path.join(path, f"**/*.{image_type}"), recursive=True))

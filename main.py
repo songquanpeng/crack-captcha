@@ -1,19 +1,16 @@
 from munch import Munch
 
 from config import setup_cfg, validate_cfg, load_cfg, save_cfg, print_cfg
-from data.loader import get_train_loader, get_test_loader, get_selected_loader
+from data.loader import get_dataloader
 from solver.solver import Solver
 
 
 def main(args):
     solver = Solver(args)
     if args.mode == 'train':
-        loaders = Munch(train=get_train_loader(**args), test=get_test_loader(**args))
-        if args.selected_path:
-            loaders.selected = get_selected_loader(**args)
+        loaders = Munch(train=get_dataloader(dataloader_mode='train', **args),
+                        test=get_dataloader(dataloader_mode='test', **args))
         solver.train(loaders)
-    elif args.mode == 'sample':
-        solver.sample()
     elif args.mode == 'eval':
         solver.evaluate()
     else:
