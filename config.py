@@ -98,6 +98,7 @@ def parse_args():
     parser.add_argument('--device', type=str, default='cuda' if torch.cuda.is_available() else 'cpu')
 
     # Model related arguments.
+    parser.add_argument('--which_model', type=str, default='origin', choices=['origin', 'vgg'])
     parser.add_argument('--img_width', type=int, default=51)
     parser.add_argument('--img_height', type=int, default=23)
 
@@ -122,7 +123,7 @@ def parse_args():
     parser.add_argument('--beta1', type=float, default=0.0)
     parser.add_argument('--beta2', type=float, default=0.99)
     parser.add_argument('--weight_decay', type=float, default=1e-4)
-    parser.add_argument('--batch_size', type=int, default=64)
+    parser.add_argument('--batch_size', type=int, default=128)
 
     # Step related arguments.
     parser.add_argument('--log_every', type=int, default=100)
