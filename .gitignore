@@ -6,6 +6,7 @@ __pycache__/
 expr/*
 archive/*
 !archive/example.gif
+!archive/captcha
 !.gitkeep
 !*.md
 *.ckpt

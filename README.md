@@ -2,7 +2,7 @@
 The captcha we about to crack is very simple, for example: ![example](archive/example.gif)
 
 ## Model Accuracy History
-|Hash|Accuracy|Remark|
+|Commit Hash|Accuracy|Remark|
 |---|---|---|
 |`f15750`|45.3125%|Initial version, 10k.|
 
