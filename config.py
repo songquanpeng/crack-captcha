@@ -106,7 +106,7 @@ def parse_args():
     parser.add_argument('--dataset_path', type=str, default='archive/captcha')
     parser.add_argument('--dataset_augmentation', type=str2bool, default=True)
     parser.add_argument('--num_chars', type=int, default=4)
-    parser.add_argument('--alphabet', type=str, default='0123456789abcdefghijklmnopqrstuvwxyz')
+    parser.add_argument('--alphabet', type=str, default='02468BDFHJLNPRTVXZ')
 
     # Training related arguments
     parser.add_argument('--parameter_init', type=str, default='he', choices=['he', 'default'])
